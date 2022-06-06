@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Roboto:wght@400;700&display=swap');
+html, body{
+    height: 100%;
+}
+body{
+
+    background-color: #B7AC72;
+    font-family: 'Cairo', sans-serif;
+}
+.menuFijo, .menuFijoC{
+    background-color: #FFF9E6;
+}
+ul{
+    list-style: none;
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/*emprolijando los items*/
+nav ul.redesLista{
+    display: flex;
+    font-family: 'Cairo', sans-serif;
+    font-weight: bolder;
+    font-size: large;
+    justify-content: center;
+          
+}
+
+img.redes{
+    width: 20px;
+    padding-right: 4px;
+    margin-right: 4px;
+}
+.redes{
+    font-size: large;
+    font-weight: bolder;
+    justify-content: center;
+    
+}
+a.ingreso{
+    margin:10px;
+}
+section.mainLinks{
+    display: flex;
+    justify-content: space-around;
+}
+section.mainImg{
+    display: flex;
+    justify-content: space-around;
+
+}
+div.imagenMobile{
+    display: none;
+}
+
+
+/*grid index*/
+body{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 1fr 4fr 130px;
+    grid-template-areas: 
+    "header header header"
+    ". main ."
+    ". section ."
+    "footer footer footer";
+}
+
+main#Main{
+    grid-area: main;
+}
+section.divTitulo{
+    grid-area: section;
+}    
+footer#pie{
+    grid-area: footer;
+    background-color: rgb(97, 96, 96);
+    font-size: 14px;
+}
+ul.dropDown{
+    grid-area: drop;
+    margin-top: 2px;
+    margin-bottom: 1px;
+}
+header{
+    grid-area: header;
+}
+/*grid Clases*/
+.bodyClases{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 130px;
+    grid-template-areas: 
+    "header header header"
+    ". article ."
+    "footer footer footer";
+}
+
+article.clases{
+    grid-area: article;
+}
+ 
+footer.footerClas{
+    grid-area: footer;
+    background-color: rgb(97, 96, 96);
+    font-size: 14px;
+}
+
+header{
+    grid-area: header;
+}
+/*grid para el header*/
+nav.menuFijo, nav.menuFijoC{
+
+    display: flex;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas: 
+    ". none redes"
+    "menuh none ingreso";
+
+}
+.divRedes{
+    grid-area: redes;
+    display: flex;
+    flex-direction: column;
+    margin-top: 2px;
+    margin-bottom: 1px;
+ 
+}
+div.menuIzq{
+    grid-area: menuh;
+    margin-top: 2px;
+    margin-bottom: 1px;
+    display: flex;
+    justify-content: center;
+}
+ul.indexMenu{
+    grid-area: ingreso;
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+    margin-bottom: 1px;
+}
+
+/*terminaciones*/
+.divTitulo{
+    
+    background-image: url(../primer\ desafio/mainclemat.png);  
+
+
+}
+.indexMenu {
+    list-style-type: none;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 2px, 2px, 2px, 2px;
+    overflow: hidden;
+    
+    
+}
+  
+.menuDrop {
+    float: left;
+}
+  
+li a, .indexMenu {
+    display: flex;
+    text-align: center;
+    padding-right: 14px;
+    padding-left: 16px;
+    text-decoration: none;
+}
+  
+li a:hover, .indexMenu:hover .menuDrop {
+    font-weight: bolder;
+    color: lightyellow;
+}
+  
+li.indexMenu {
+    display: inline-block;
+}
+  
+.dropDown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+  
+.dropDown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+  
+.dropDown a:hover {
+    background-color: #f1f1f1;
+}
+  
+.indexMenu:hover .dropDown {
+    display: block;
+}
+span a img{
+    width:100px;
+}
+
+/*pestaña clases*/
+.bodyClases{
+    background-color: #DC632C;
+
+}
+.clases{
+    width: 100%;
+    height: 100%;
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: stretch;
+}
+.mensuales{
+    width: 50%;
+    background-image: url(../primer\ desafio/lasalablanca.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.talleres{
+    width: 50%;
+    background-image: url(../primer\ desafio/letournispadel.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (min-width:320px) {}
+
+@media screen and (max-width: 600px) {
+    body{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 4fr;
+        grid-template-areas: 
+        "header"
+        "main"
+        ;
+    }
+    
+    main#Main{
+        grid-area: main;
+        display: flex;
+        flex-direction: row;
+        
+        
+    }
+    section.divTitulo{
+        grid-area: section;
+        display: none;
+    }    
+    footer#pie{
+        grid-area: footer;
+        background-color: rgb(97, 96, 96);
+        font-size: 14px;
+        display: none;
+    }
+    ul.dropDown{
+        grid-area: drop;
+        margin-top: 2px;
+        margin-bottom: 1px;
+        display: none;
+    }
+    nav.menuFijo{
+        grid-area: header;
+
+    }
+    section.mainLinks{
+        display: none;
+    }
+    
+
+    section.mainImg {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+      }
+    span a img{
+        width:200px;
+    }
+    .menuFijo{
+        background-color: #B7AC72;
+    }
+    .bodyClases{
+        background-color: #FFF9E6;
+    }
+    nav.menuFijoC{
+        display: none;
+    }
+
+    /*responsive Clases*/
+    body.bodyClases{
+        width: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 2fr 2fr 1fr;
+        grid-template-areas: 
+        "header"
+        "article"
+        "footer"
+        ;
+    }
+
+    footer.footerClas{
+        grid-area: footer;
+        background-image: url(../piedepagMobileClases.JPG);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    article.Clases{
+        grid-area: article;
+    }
+    footer.footerClas ul{
+        display: none;
+    }
+    footer.footerClas h6{
+        display: none;
+    }
+
+    .clases {
+        width: 100%;
+        height: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: stretch;
+    }
+    section.mensuales, section.talleres{
+        width: 100%;
+        text-align: center;
+    }
+    section.mensuales{
+        background-image: url(./img/rectanguloarticleMobile.png);
+        background-size: cover;
+    }
+    section.talleres{
+        background-image: url(./img/rectanglearticle2Mobile.png);
+        background-size: cover;
+        
+    }
+    div.imagenMobile{
+        grid-area: header;
+        display: block;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 1024px) {}
+
+@media screen and (min-width: 1200px) {}
