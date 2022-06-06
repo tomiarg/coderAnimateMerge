@@ -8,7 +8,7 @@ body{
     font-family: 'Cairo', sans-serif;
 }
 .menuFijo, .menuFijoC{
-    background-color: #FFF9E6;
+    background: linear-gradient(to right, #B7AC72, #f9f9f9 )
 }
 ul{
     list-style: none;
